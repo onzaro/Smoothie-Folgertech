@@ -63,7 +63,7 @@ gamma_max_rate                               300.0            # mm/min
 
 ## System configuration
 # Serial communications configuration ( baud rate defaults to 9600 if undefined )
-uart0.baud_rate                              115200           # Baud rate for the default hardware serial port
+uart0.baud_rate                              250000           # Baud rate for the default hardware serial port
 second_usb_serial_enable                     false            # This enables a second usb serial port (to have both pronterface
                                                               # and a terminal connected)
 #leds_disable                                true             # disable using leds after config loaded
@@ -123,17 +123,6 @@ delta_current                                0.8              # First extruder s
 #epsilon_current                              1.5              # Second extruder stepper motor current
 
 
-## Laser module configuration
-laser_module_enable                          false            # Whether to activate the laser module at all. All configuration is
-                                                              # ignored if false.
-#laser_module_pin                             2.5             # this pin will be PWMed to control the laser. Only P2.0 - P2.5, P1.18, P1.20, P1.21, P1.23, P1.24, P1.26, P3.25, P3.26
-                                                              # can be used since laser requires hardware PWM
-#laser_module_maximum_power                   1.0             # this is the maximum duty cycle that will be applied to the laser
-#laser_module_minimum_power                   0.0             # This is a value just below the minimum duty cycle that keeps the laser
-                                                              # active without actually burning.
-#laser_module_default_power                   0.8             # This is the default laser power that will be used for cuts if a power has not been specified.  The value is a scale between
-                                                              # the maximum and minimum power levels specified above
-#laser_module_pwm_period                      20              # this sets the pwm frequency as the period in microseconds
 
 ## Temperature control configuration
 # First hotend configuration
@@ -197,7 +186,7 @@ switch.fan.enable                            true             #
 switch.fan.input_on_command                  M106             #
 switch.fan.input_off_command                 M107             #
 switch.fan.output_pin                        2.4              #
-switch.fan.output_type                       digital              # pwm output settable with S parameter in the input_on_comand
+switch.fan.output_type                       pwm              # pwm output settable with S parameter in the input_on_comand
 switch.fan.max_pwm                           255              # set max pwm for the pin default is 255
 
 #switch.misc.enable                           true             #
