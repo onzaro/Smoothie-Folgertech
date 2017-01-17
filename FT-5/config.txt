@@ -222,7 +222,7 @@ beta_max_endstop                             nc            #
 beta_homing_direction                        home_to_min      #
 beta_min                                     0                #
 beta_max                                     280              #
-#gamma_min_endstop                            1.28^!            #
+#gamma_min_endstop                            nc            #1.28^!
 #gamma_max_endstop                            nc            #
 gamma_homing_direction                       home_to_min      #
 gamma_min                                    0                #
@@ -240,10 +240,10 @@ homing_order                                 XYZ              # x axis followed 
 
 alpha_fast_homing_rate_mm_s                  50               # feedrates in mm/second
 beta_fast_homing_rate_mm_s                   50               # "
-gamma_fast_homing_rate_mm_s                  4                # "
+gamma_fast_homing_rate_mm_s                  10                # "
 alpha_slow_homing_rate_mm_s                  25               # "
 beta_slow_homing_rate_mm_s                   25               # "
-gamma_slow_homing_rate_mm_s                  2                # "
+gamma_slow_homing_rate_mm_s                  5                # "
 
 alpha_homing_retract_mm                      5                # distance in mm
 beta_homing_retract_mm                       5                # "
@@ -252,8 +252,8 @@ gamma_homing_retract_mm                      1                # "
 #endstop_debounce_count                       100              # uncomment if you get noise on your endstops, default is 100
 
 ## Z-probe
-zprobe.enable                                false           # set to true to enable a zprobe
-zprobe.probe_pin                             1.28         # pin probe is attached to if NC remove the !
+zprobe.enable                                true           # set to true to enable a zprobe
+zprobe.probe_pin                             1.28            # pin probe is attached to if NC remove the !
 zprobe.slow_feedrate                         5               # mm/sec probe feed rate
 #zprobe.debounce_count                       100             # set if noisy
 zprobe.fast_feedrate                         100             # move feedrate mm/sec
@@ -264,7 +264,7 @@ zprobe.probe_height                          5               # how much above be
 switch.servo.enable                            true           #
 switch.servo.input_on_command                  M280 S3.0      # M280 S7.5 would be midway
 switch.servo.input_off_command                 M280 S7.0    # same as M280 S0 0% duty cycle, effectively off
-switch.servo.output_pin                        1.23          # must be a PWM capable pin
+switch.servo.output_pin                        1.23         # must be a PWM capable pin
 switch.servo.output_type                       hwpwm          # H/W pwm output settable with S parameter in the input_on_comand
 switch.servo.pwm_period_ms                    20             # set period to 20ms (50Hz) default is 50Hz
 
