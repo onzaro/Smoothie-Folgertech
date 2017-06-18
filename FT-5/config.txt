@@ -228,7 +228,7 @@ beta_homing_direction                        home_to_min      #
 beta_min                                     0                #
 beta_max                                     260              #
 
-gamma_min_endstop                            1.29v            #1.28^!
+#gamma_min_endstop                            1.29v            #1.28^!
 #gamma_max_endstop                            nc            #
 gamma_homing_direction                       home_to_min      #
 gamma_min                                    0                #
@@ -258,12 +258,12 @@ gamma_homing_retract_mm                      1                # "
 #endstop_debounce_count                       100              # uncomment if you get noise on your endstops, default is 100
 
 ## Z-probe
-zprobe.enable                                false           # set to true to enable a zprobe
-zprobe.probe_pin                             1.28            # pin probe is attached to if NC remove the !
+zprobe.enable                                true           # set to true to enable a zprobe
+zprobe.probe_pin                             1.28^            # pin probe is attached to if NC remove the !
 zprobe.slow_feedrate                         5               # mm/sec probe feed rate
 #zprobe.debounce_count                       100             # set if noisy
 zprobe.fast_feedrate                         100             # move feedrate mm/sec
-zprobe.probe_height                          5               # how much above bed to start probe
+zprobe.probe_height                          10               # how much above bed to start probe
 
 
 # Switch module for Z probe servo control
@@ -277,15 +277,15 @@ switch.servo.pwm_period_ms                    20             # set period to 20m
 
 
 # associated with zprobe the leveling strategy to use
-#leveling-strategy.delta-grid.enable         false        
-#leveling-strategy.delta-grid.radius         125
-#leveling-strategy.delta-grid.size           7
-#leveling-strategy.delta-grid.do_home         true
-#leveling-strategy.delta-grid.probe_offsets  -27,0,0  # probe offsets x,y,z  (Z should always be 0)
-##leveling-strategy.delta-grid.save          true
-#leveling-strategy.delta-grid.initial_height  10
-#mm_per_line_segment 1                        # necessary for cartesians using delta-grid
-#leveling-strategy.delta-grid.is_square        true
+leveling-strategy.delta-grid.enable         false        
+leveling-strategy.delta-grid.radius         50
+leveling-strategy.delta-grid.size           9
+leveling-strategy.delta-grid.do_home         true
+leveling-strategy.delta-grid.probe_offsets  28,0,0  # probe offsets x,y,z  (Z should always be 0)
+leveling-strategy.delta-grid.save          true
+leveling-strategy.delta-grid.initial_height  10
+mm_per_line_segment 1                        # necessary for cartesians using delta-grid
+leveling-strategy.delta-grid.is_square        true
 #leveling-strategy.delta-grid.max_x          125
 #leveling-strategy.delta-grid.max_y          125
 #save_g92                                    true
