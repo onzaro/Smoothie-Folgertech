@@ -277,17 +277,17 @@ switch.servo.pwm_period_ms                    20             # set period to 20m
 
 
 # associated with zprobe the leveling strategy to use
-leveling-strategy.delta-grid.enable         false        
-leveling-strategy.delta-grid.radius         50
-leveling-strategy.delta-grid.size           9
-leveling-strategy.delta-grid.do_home         true
-leveling-strategy.delta-grid.probe_offsets  28,0,0  # probe offsets x,y,z  (Z should always be 0)
-leveling-strategy.delta-grid.save          true
-leveling-strategy.delta-grid.initial_height  10
+leveling-strategy.rectangular-grid.enable         false        
+leveling-strategy.rectangular-grid.radius         50
+leveling-strategy.rectangular-grid.size           9
+leveling-strategy.rectangular-grid.do_home         true
+leveling-strategy.rectangular-grid.probe_offsets  28,0,0  # probe offsets x,y,z  (Z should always be 0)
+leveling-strategy.rectangular-grid.save          true
+leveling-strategy.rectangular-grid.initial_height  10
 mm_per_line_segment 1                        # necessary for cartesians using delta-grid
-leveling-strategy.delta-grid.is_square        true
-#leveling-strategy.delta-grid.max_x          125
-#leveling-strategy.delta-grid.max_y          125
+leveling-strategy.rectangular-grid.is_square        true
+#leveling-strategy.rectangular-grid.max_x          125
+#leveling-strategy.rectangular-grid.max_y          125
 #save_g92                                    true
 
 
