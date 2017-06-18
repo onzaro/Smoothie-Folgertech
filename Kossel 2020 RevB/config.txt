@@ -266,10 +266,26 @@ zprobe.fast_feedrate                         100             # move feedrate mm/
 zprobe.probe_height                          15               # how much above bed to start probe
 #gamma_min_endstop                           nc              # normally 1.28. Change to nc to prevent conflict,
 
+
+leveling-strategy.delta-calibration.enable         true        
+leveling-strategy.delta-calibration.radius         80
+leveling-strategy.delta-grid.probe_offsets         0,-31,0
+leveling-strategy.delta-calibration.size           10
+
 # associated with zprobe the leveling strategy to use
-leveling-strategy.delta-calibration.enable   true            # basic delta calibration
-leveling-strategy.delta-calibration.radius   70             # the probe radius
-leveling-strategy.delta-calibration.initial_height         10   
+leveling-strategy.rectangular-grid.enable               true     # The strategy must be enabled in the config, as well as the zprobe module.
+leveling-strategy.rectangular-grid.x_size               80       # size of bed in the X axis
+leveling-strategy.rectangular-grid.y_size               80       # size of bed in the Y axis
+leveling-strategy.rectangular-grid.size                 11    # The size of the grid, for example, 7 causes a 7x7 grid with 49 points. 
+                                                           # Must be an odd number.
+leveling-strategy.rectangular-grid.probe_offsets        0,-31,0    # Optional probe offsets from the nozzle or tool head
+leveling-strategy.rectangular-grid.save                 true    # If the saved grid is to be loaded on boot then this must be set to true
+leveling-strategy.rectangular-grid.initial_height       7       # Optionally an initial_height can be set that tell the intial probe 
+                                                           # where to stop the fast decent before it probes, this should be 
+                                                           # around 5-10mm above the bed
+leveling-strategy.rectangular-grid.do_home        true
+
+
 
 # kill button (used to be called pause) maybe assigned to a different pin, set to the onboard pin by default
 kill_button_enable                           true             # set to true to enable a kill button
