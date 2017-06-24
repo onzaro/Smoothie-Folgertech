@@ -181,6 +181,9 @@ switch.fan.output_pin                        2.4              #
 switch.fan.output_type                       pwm              # pwm output settable with S parameter in the input_on_comand
 switch.fan.max_pwm                           255              # set max pwm for the pin default is 255
 
+
+
+
 #switch.misc.enable                           true             #
 #switch.misc.input_on_command                 M42              #
 #switch.misc.input_off_command                M43              #
@@ -209,7 +212,7 @@ alpha_min_endstop                            1.25^!            # add a ! to inve
 alpha_homing_direction                       home_to_min      # or set to home_to_max and set alpha_max
 alpha_min                                     0
 #alpha_max                                    130              # this gets loaded after homing when home_to_max is set
-alpha_max                                    260  
+alpha_max                                    275  
 
 beta_min_endstop                             1.26^!            #
 #beta_max_endstop                             nc            #
@@ -217,7 +220,7 @@ beta_homing_direction                        home_to_min      #
 #beta_min                                     -130                #
 #beta_max                                     130              #
 beta_min                                     0                #
-beta_max                                     260              #
+beta_max                                     275              #
 
 gamma_min_endstop                            1.28^            #1.28^!
 #gamma_min_endstop                            nc
